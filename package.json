@@ -1,0 +1,21 @@
+{
+  "name": "my-gridsome-default",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/remark-prismjs": "^0.3.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.1",
+    "gridsome": "^0.7.0",
+    "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "gridsome-plugin-tailwindcss": "^3.0.1",
+    "sass-loader": "^9.0.2"
+  }
+}
