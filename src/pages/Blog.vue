@@ -1,10 +1,13 @@
 <template>
-  <h1>Latest Posts</h1>
+  <Layout>
+    <h1 class="text-3xl">Latest Posts</h1>
+    <h2 class="text-xl">Page is coming soon</h2>
+  </Layout>
 </template>
 
 <script>
   export default {
-    name: 'Blog'
+    name: "Blog"
   };
 </script>
 
