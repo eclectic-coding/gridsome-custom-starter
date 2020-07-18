@@ -1,15 +1,13 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
+  <div>
+    <a href="#main" class="sr-only">Skip to content</a>
+    <div class="flex flex-col min-h-screen">
+      <Header />
+      <main id="main" class="container mx-auto flex flex-1 flex-col py-10 lg:py-20">
+        <slot/>
+      </main>
+       <Footer />
+    </div>
   </div>
 </template>
 
@@ -21,8 +19,14 @@ query {
 }
 </static-query>
 
-<style>
-body {
+<script>
+  import Header from '@/components/Header.vue';
+  import Footer from '@/components/Footer.vue';
 
-}
-</style>
+  export default {
+    components: {
+      Header,
+      Footer
+    }
+  }
+</script>
