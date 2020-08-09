@@ -5,35 +5,35 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: "Gridsome",
   templates: {
     Post: [{
-      path: '/post/:title',
+      path: "/post/:title"
       // component: './src/templates/BlogEntry.vue'
     }],
     Tag: [{
-      path: '/tag/:title',
+      path: "/tag/:title"
       // component: './src/templates/Tag.vue'
     }]
   },
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'content/posts/**/*.md',
-        typeName: 'Post',
+        path: "content/posts/**/*.md",
+        typeName: "Post",
         refs: {
           tags: {
-            typeName: 'Tag',
+            typeName: "Tag",
             create: true
           }
         }
       }
     },
     {
-      use: 'gridsome-plugin-tailwindcss',
+      use: "gridsome-plugin-tailwindcss",
       options: {
-        tailwindConfig: './tailwind.config.js',
+        tailwindConfig: "./tailwind.config.js",
         purgeConfig: {},
         presetEnvConfig: {},
         shouldPurge: true,
@@ -45,11 +45,11 @@ module.exports = {
   ],
   transformers: {
     remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+      anchorClassName: "icon icon-link",
       plugins: [
-        '@gridsome/remark-prismjs'
+        "@gridsome/remark-prismjs"
       ]
     }
   }
